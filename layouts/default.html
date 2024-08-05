@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | absolute_url }}">Home</a></li>
+        <li><a href="{{ "/about/" | absolute_url }}">About</a></li>
+        <li><a href="{{ "/posts/" | absolute_url }}">Posts</a></li>
+      </ul>
+    </nav>
+    <a href="{{ "/feed.xml" | absolute_url }}">Subscribe via RSS</a>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>Official website for Harmoniza, featuring lofi, ambient, trap, pop music, and more. Find drumbeats, chord progressions, loops, and more!</p>
+    <p>
+      <a href="mailto:el602444@gmail.com">el602444@gmail.com</a> |
+      <a href="https://twitter.com/your-twitter-username">Follow us on Twitter</a>
+    </p>
+  </footer>
+</body>
+</html>
