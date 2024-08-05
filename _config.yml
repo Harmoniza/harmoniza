@@ -1,6 +1,6 @@
 title: Harmoniza
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Official website for Harmoniza, featuring lofi, ambient, trap, pop music, and more. Find drumbeats, chord progressions, loops, and more!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://harmoniza.github.io" # the base hostname & protocol for your site, e.g. http://example.com
