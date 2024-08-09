@@ -2,8 +2,8 @@ title: Harmoniza
 email: el602444@gmail.com
 description: >-
   Official website for Harmoniza, featuring lofi, ambient, trap, pop music, and more. Find drumbeats, chord progressions, loops, and more!
-baseurl: "/harmoniza" # the subpath of your site
-url: "https://harmoniza.github.io" # the base hostname & protocol for your site
+baseurl: "/harmoniza" # The subpath of your site
+url: "https://harmoniza.github.io" # The base hostname & protocol for your site
 twitter_username: Harmoniza
 github_username: Harmoniza
 
