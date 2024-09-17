@@ -1,0 +1,313 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #000000; /* Background color from logo */
+}
+
+/* Navigation Styling */
+nav {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #333333 100%
+  ); /* Updated background with gradient */
+  color: #fff;
+  padding: 1rem 2rem; /* Increased padding for a larger header */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transition: background 0.3s, padding 0.3s, box-shadow 0.3s;
+}
+
+nav:hover {
+  background: linear-gradient(
+    135deg,
+    #333333 0%,
+    #000000 100%
+  ); /* Inverted gradient on hover */
+  padding: 1.5rem 2.5rem; /* Increased padding on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #38b6ff; /* Initials color */
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s, text-shadow 0.3s;
+  background: linear-gradient(to bottom, transparent 70%, #000000 30%);
+  background-size: 100% 200%;
+  background-position: 0 0;
+}
+
+nav ul li a:hover {
+  color: #edd638; /* Hover color */
+  background-position: 0 100%;
+  text-shadow: 0 0 4px #edd638, 0 0 10px #edd638; /* Added text-shadow on hover */
+}
+
+/* Header Styling for Homepage */
+.home-header {
+  text-align: center;
+  color: #ffffff;
+  padding: 2rem;
+  background: #38b6ff; /* Initials color */
+  border-bottom: 5px solid #edd638; /* Accent color */
+}
+
+.home-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+}
+
+.home-header nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Explore Sections Styling */
+.explore-sections {
+  padding: 2rem;
+  background: #333333; /* Dark background for contrast */
+}
+
+.explore-sections h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.section-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.section-card h3 {
+  margin: 0.5rem 0;
+  color: #38b6ff;
+}
+
+.section-card p {
+  color: #555555;
+}
+
+.section-link {
+  color: #38b6ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.section-link:hover {
+  color: #edd638;
+  text-shadow: 0 0 4px #edd638, 0 0 6px #edd638;
+}
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #333333 100%
+  ); /* Updated background with gradient */
+  color: #fff;
+  padding: 2rem; /* Increased padding for a larger footer */
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  position: relative;
+  overflow: hidden; /* To contain animated elements */
+}
+
+footer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  opacity: 0.3;
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer ul li {
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: #38b6ff; /* Initials color */
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+footer ul li a:hover {
+  color: #edd638; /* Hover color */
+  text-shadow: 0 0 6px #38b6ff, 0 0 10px #38b6ff; /* Added text-shadow on hover */
+}
+
+/* Container Styling */
+.container {
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+/* Donation Button Styling */
+.donation-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.donation-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #38b6ff; /* Initials color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  box-shadow: 0 0 8px #38b6ff, 0 0 12px #38b6ff;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.donation-button:hover {
+  background-color: #edd638; /* Hover color */
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #edd638, 0 0 16px #edd638;
+}
+
+/* Hover and Transition Effects */
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+a:hover {
+  color: #38b6ff; /* Initials color */
+  background-color: rgba(56, 182, 255, 0.1); /* Light background on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+button,
+input[type="submit"] {
+  border: none;
+  background-color: #38b6ff; /* Initials color */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 8px #38b6ff, 0 0 12px #38b6ff;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #edd638; /* Hover color */
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #edd638, 0 0 16px #edd638;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .donation-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  footer ul li {
+    margin: 5px;
+  }
+
+  .section-card {
+    padding: 0.5rem;
+  }
+}

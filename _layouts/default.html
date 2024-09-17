@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <nav class="site-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="{{ "/" | relative_url }}" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="{{ "/about/" | relative_url }}" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="{{ "/full_tracks/" | relative_url }}" class="nav-link">Full Tracks</a></li>
+      <li class="nav-item"><a href="{{ "/tools_and_resources/" | relative_url }}" class="nav-link">Tools & Resources</a></li>
+      <li class="nav-item"><a href="{{ "/blog/" | relative_url }}" class="nav-link">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="container">
+    {{ content }}
+  </div>
+
+  <!-- Donation Button -->
+  <div class="donation-container">
+    <a href="https://www.paypal.com/donate?business=your-business-email" target="_blank" class="donation-button">Support Us</a>
+  </div>
+
+  <!-- Footer with Social Links -->
+  <footer class="site-footer">
+    <p>&copy; {{ site.title }} - All rights reserved.</p>
+    <ul class="social-links">
+      <li><a href="https://www.bandlab.com/harmoniza_" target="_blank" class="social-link">BandLab</a></li>
+      <li><a href="https://harmoniza.bandcamp.com/" target="_blank" class="social-link">Bandcamp</a></li>
+      <li><a href="https://www.youtube.com/@Harmoniza7" target="_blank" class="social-link">YouTube</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
