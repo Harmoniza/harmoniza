@@ -7,13 +7,6 @@ title: Home
   <header class="home-header">
     <h1>Welcome to Harmoniza</h1>
     <p>Discover a wide range of high-quality, royalty-free music tracks and resources designed to elevate your projects.</p>
-    <nav>
-      <a href="/tools_and_resources/loops/">Loops</a>
-      <a href="/tools_and_resources/chord_progressions/">Chord Progressions</a>
-      <a href="/tools_and_resources/sound_effects/">Sound Effects</a>
-      <a href="/tools_and_resources/vocals/">Vocals</a>
-      <a href="/full_tracks/">Full Tracks</a>
-    </nav>
   </header>
 
   <section class="explore-sections">
@@ -62,13 +55,3 @@ title: Home
     </form>
   </section>
 </div>
-
-<footer>
-  <p>&copy; 2024 Harmoniza. All rights reserved.</p>
-  <nav>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
-    <a href="/support/">Support</a>
-  </nav>
-  <a href="/support/" class="donate-button">Donate</a>
-</footer>

@@ -5,6 +5,10 @@ body {
   padding: 0;
   color: #333;
   background: #000000; /* Background color from logo */
+  background-image: url("/assets/images/Harmoniza-body-background-image.jpeg"); /* Relative path to background image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Makes sure the background is fixed while scrolling */
 }
 
 /* Navigation Styling */
@@ -68,7 +72,9 @@ nav ul li a:hover {
   text-align: center;
   color: #ffffff;
   padding: 2rem;
-  background: #38b6ff; /* Initials color */
+  background: url("/assets/images/Harmoniza-header-background-image.jpeg"); /* Relative path to header background image */
+  background-size: cover;
+  background-position: center;
   border-bottom: 5px solid #edd638; /* Accent color */
 }
 
@@ -276,38 +282,20 @@ input[type="submit"]:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  nav {
-    padding: 1rem;
-    box-shadow: none;
+  .home-header h1 {
+    font-size: 2rem;
   }
 
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .container {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  .donation-button {
-    padding: 0.75rem 1.5rem;
+  .home-header p {
     font-size: 1rem;
   }
 
-  footer {
-    padding: 1rem;
+  .section-grid {
+    grid-template-columns: 1fr;
   }
 
-  footer ul li {
-    margin: 5px;
-  }
-
-  .section-card {
-    padding: 0.5rem;
+  .donation-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
   }
 }
