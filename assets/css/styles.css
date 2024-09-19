@@ -283,69 +283,41 @@ footer ul li a:hover {
 .posts p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8); /* Matches About section body text */
+  color: rgba(255, 255, 255, 0.8);
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Stay Tuned for Updates Section */
-.subscribe-section {
-  padding: 3rem 2rem;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  border-radius: 8px;
-  margin: 2rem 0;
-  color: rgba(255, 255, 255, 0.9); /* High visibility */
-  text-align: center;
-}
-
-.subscribe-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #38b6ff; /* Matches theme color */
-}
-
-.subscribe-section p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.subscribe-section input[type="email"] {
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  margin-right: 1rem;
-}
-
-.subscribe-section button {
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  background-color: #38b6ff;
+/* Stay Tuned Section */
+.stay-tuned {
+  padding: 4rem 2rem;
+  background: #333333; /* Dark background to match the theme */
   color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.subscribe-section button:hover {
-  background-color: #edd638; /* Hover effect for subscribe button */
-}
-
-.posts a {
-  color: #38b6ff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.posts a:hover {
-  color: #edd638; /* Hover effect for post links */
-}
-
-.support-section {
-  padding: 3rem 2rem; /* Padding for Support Us */
-  background: rgba(0, 0, 0, 0.8); /* Slightly more transparent */
-  color: #fff;
   text-align: center;
+}
+
+.stay-tuned h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #38b6ff; /* Matching the primary theme color */
+}
+
+.stay-tuned p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stay-tuned a {
+  color: #38b6ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.stay-tuned a:hover {
+  color: #edd638;
+  text-shadow: 0 0 6px #38b6ff, 0 0 10px #38b6ff;
 }
