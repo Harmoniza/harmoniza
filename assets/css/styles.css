@@ -16,7 +16,7 @@ nav {
   background: linear-gradient(
     135deg,
     #000000 0%,
-    #333333 100%
+    #000000 100%
   ); /* Gradient background for a modern look */
   color: #fff;
   padding: 2rem 3rem; /* Adjusted padding */
@@ -98,7 +98,7 @@ nav ul li a:hover {
 /* Explore Sections Styling */
 .explore-sections {
   padding: 4rem 2rem; /* Adjusting padding for better spacing below header */
-  background: #333333; /* Dark background to match theme */
+  background: #030303; /* Dark background to match theme */
 }
 
 .explore-sections h2 {
@@ -136,7 +136,7 @@ nav ul li a:hover {
 }
 
 .section-card p {
-  color: #555555;
+  color: #070707;
 }
 
 .section-link {
@@ -219,93 +219,133 @@ footer ul li a:hover {
   text-shadow: 0 0 6px #38b6ff, 0 0 10px #38b6ff; /* Added text-shadow on hover */
 }
 
-/* Container Styling */
-.container {
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
-  max-width: 1200px;
+/* About Page Styling */
+.about-container {
+  padding: 4rem 2rem;
+  background: #000000; /* Dark theme background */
+  color: #ffffff; /* White text */
 }
 
-/* Donation Button Styling */
-.donation-container {
+.about-header h1 {
   text-align: center;
-  margin: 2rem 0;
+  font-size: 3rem;
+  color: #38b6ff; /* Matching the primary theme color */
+  margin-bottom: 2rem;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.donation-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #38b6ff; /* Initial color */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
+.about-header h1:hover {
+  color: #edd638; /* Hover effect color */
+  transform: scale(1.05); /* Slight lift on hover */
+}
+
+.about-header p {
   font-size: 1.2rem;
-  box-shadow: 0 0 8px #38b6ff, 0 0 12px #38b6ff;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Slight transparency */
 }
 
-.donation-button:hover {
-  background-color: #edd638; /* Hover color */
-  transform: scale(1.05);
-  box-shadow: 0 0 12px #edd638, 0 0 16px #edd638;
+/* Padding for 'Tools and Resources' Section */
+.tools-resources {
+  padding: 4rem 2rem; /* Matching padding for consistency */
+  background: #000000; /* Dark background */
 }
 
-/* Hover and Transition Effects */
-a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+.tools-resources p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Matches the About section body text */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-a:hover {
-  color: #38b6ff; /* Initial color */
-  background-color: rgba(56, 182, 255, 0.1); /* Light background on hover */
-  transform: translateY(-3px); /* Slight lift effect */
+.tools-resources .button {
+  background-color: #38b6ff;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-button,
-input[type="submit"] {
-  border: none;
-  background-color: #38b6ff; /* Initial color */
-  color: #fff;
-  padding: 0.8rem 1.6rem;
-  border-radius: 5px;
+.tools-resources .button:hover {
+  background-color: #edd638;
+}
+
+/* Posts Section */
+.posts {
+  padding: 4rem 2rem; /* Consistent padding for posts section */
+  background: #000000; /* Consistent dark theme */
+}
+
+.posts p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Matches About section body text */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Stay Tuned for Updates Section */
+.subscribe-section {
+  padding: 3rem 2rem;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 8px;
+  margin: 2rem 0;
+  color: rgba(255, 255, 255, 0.9); /* High visibility */
+  text-align: center;
+}
+
+.subscribe-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #38b6ff; /* Matches theme color */
+}
+
+.subscribe-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.subscribe-section input[type="email"] {
+  padding: 0.8rem 1rem;
   font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.subscribe-section button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #38b6ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: #edd638; /* Hover color */
-  transform: scale(1.05);
+.subscribe-section button:hover {
+  background-color: #edd638; /* Hover effect for subscribe button */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .container {
-    padding: 1rem;
-    margin: 1rem;
-  }
+.posts a {
+  color: #38b6ff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-@media (max-width: 480px) {
-  .home-header h1 {
-    font-size: 2.5rem; /* Smaller font size on smaller screens */
-  }
+.posts a:hover {
+  color: #edd638; /* Hover effect for post links */
+}
 
-  .home-header p {
-    font-size: 1.2rem;
-  }
+.support-section {
+  padding: 3rem 2rem; /* Padding for Support Us */
+  background: rgba(0, 0, 0, 0.8); /* Slightly more transparent */
+  color: #fff;
+  text-align: center;
 }
