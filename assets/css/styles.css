@@ -3,9 +3,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #333; /* Don't change this */
   background: #000000; /* Background color from logo */
-  background-image: url("/assets/images/Harmoniza-body-background-image.jpeg"); /* Relative path to background image */
+  background-image: url("/assets/images/Harmoniza-body-background-image.jpg"); /* Relative path to background image */
   background-size: cover; /* Ensures the image covers the entire background */
   background-position: center; /* Centers the background image */
   background-attachment: fixed; /* Makes sure the background is fixed while scrolling */
@@ -16,12 +16,12 @@ nav {
   background: linear-gradient(
     135deg,
     #000000 0%,
-    #333333 100%
-  ); /* Updated background with gradient */
+    #000000 100%
+  ); /* Gradient background for a modern look */
   color: #fff;
-  padding: 1rem 2rem; /* Increased padding for a larger header */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-  transition: background 0.3s, padding 0.3s, box-shadow 0.3s;
+  padding: 2rem 3rem; /* Adjusted padding */
+  box-shadow: none; /* Removed shadow */
+  transition: background 0.3s, padding 0.3s;
 }
 
 nav:hover {
@@ -29,9 +29,8 @@ nav:hover {
     135deg,
     #333333 0%,
     #000000 100%
-  ); /* Inverted gradient on hover */
-  padding: 1.5rem 2.5rem; /* Increased padding on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+  ); /* Subtle hover effect */
+  padding: 2.5rem 3.5rem; /* Smooth increase on hover */
 }
 
 nav ul {
@@ -49,13 +48,13 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #38b6ff; /* Initials color */
+  color: #38b6ff; /* Initial color */
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.5rem 0;
   display: inline-block;
   position: relative;
-  transition: color 0.3s, background-color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
   background: linear-gradient(to bottom, transparent 70%, #000000 30%);
   background-size: 100% 200%;
   background-position: 0 0;
@@ -64,45 +63,51 @@ nav ul li a {
 nav ul li a:hover {
   color: #edd638; /* Hover color */
   background-position: 0 100%;
-  text-shadow: 0 0 4px #edd638, 0 0 10px #edd638; /* Added text-shadow on hover */
+  transform: translateY(-3px); /* Slight lift effect */
 }
 
 /* Header Styling for Homepage */
 .home-header {
   text-align: center;
   color: #ffffff;
-  padding: 2rem;
-  background: url("/assets/images/Harmoniza-header-background-image.jpeg"); /* Relative path to header background image */
+  padding: 5rem 1rem; /* Increased padding to blend with larger background */
+  background: url("/assets/images/Harmoniza-header-background-image.jpg")
+    no-repeat center center;
   background-size: cover;
-  background-position: center;
-  border-bottom: 5px solid #edd638; /* Accent color */
+  background-blend-mode: darken;
+  border-bottom: 5px solid #edd638; /* Accent line to match hover color */
 }
 
 .home-header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 4rem; /* Increased font size for prominence */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Subtle transparency with high visibility */
 }
 
 .home-header p {
-  font-size: 1.2rem;
-}
-
-.home-header nav {
-  display: flex;
-  justify-content: center;
+  font-size: 1.5rem; /* Larger text for better readability */
   margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.8); /* Subtle transparency for secondary text */
 }
 
 /* Explore Sections Styling */
 .explore-sections {
-  padding: 2rem;
-  background: #333333; /* Dark background for contrast */
+  padding: 4rem 2rem; /* Adjusting padding for better spacing below header */
+  background: #030303; /* Dark background to match theme */
 }
 
 .explore-sections h2 {
   color: #ffffff;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem; /* Increased space to give breathing room */
+  font-size: 2.5rem; /* Increased font size for emphasis */
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
 }
 
 .section-grid {
@@ -131,7 +136,7 @@ nav ul li a:hover {
 }
 
 .section-card p {
-  color: #555555;
+  color: #070707;
 }
 
 .section-link {
@@ -152,13 +157,13 @@ footer {
     135deg,
     #000000 0%,
     #333333 100%
-  ); /* Updated background with gradient */
+  ); /* Consistent gradient */
   color: #fff;
-  padding: 2rem; /* Increased padding for a larger footer */
+  padding: 3rem; /* Larger footer to balance the design */
   text-align: center;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
   position: relative;
-  overflow: hidden; /* To contain animated elements */
+  overflow: hidden;
 }
 
 footer:before {
@@ -202,7 +207,7 @@ footer ul li {
 }
 
 footer ul li a {
-  color: #38b6ff; /* Initials color */
+  color: #38b6ff; /* Initial color */
   text-decoration: none;
   font-size: 1rem;
   position: relative;
@@ -214,88 +219,133 @@ footer ul li a:hover {
   text-shadow: 0 0 6px #38b6ff, 0 0 10px #38b6ff; /* Added text-shadow on hover */
 }
 
-/* Container Styling */
-.container {
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
-  max-width: 1200px;
+/* About Page Styling */
+.about-container {
+  padding: 4rem 2rem;
+  background: #000000; /* Dark theme background */
+  color: #ffffff; /* White text */
 }
 
-/* Donation Button Styling */
-.donation-container {
+.about-header h1 {
   text-align: center;
-  margin: 2rem 0;
+  font-size: 3rem;
+  color: #38b6ff; /* Matching the primary theme color */
+  margin-bottom: 2rem;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.donation-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #38b6ff; /* Initials color */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
+.about-header h1:hover {
+  color: #edd638; /* Hover effect color */
+  transform: scale(1.05); /* Slight lift on hover */
+}
+
+.about-header p {
   font-size: 1.2rem;
-  box-shadow: 0 0 8px #38b6ff, 0 0 12px #38b6ff;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Slight transparency */
 }
 
-.donation-button:hover {
-  background-color: #edd638; /* Hover color */
-  transform: scale(1.05);
-  box-shadow: 0 0 12px #edd638, 0 0 16px #edd638;
+/* Padding for 'Tools and Resources' Section */
+.tools-resources {
+  padding: 4rem 2rem; /* Matching padding for consistency */
+  background: #000000; /* Dark background */
 }
 
-/* Hover and Transition Effects */
-a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+.tools-resources p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Matches the About section body text */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-a:hover {
-  color: #38b6ff; /* Initials color */
-  background-color: rgba(56, 182, 255, 0.1); /* Light background on hover */
-  transform: translateY(-3px); /* Slight lift effect */
+.tools-resources .button {
+  background-color: #38b6ff;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-button,
-input[type="submit"] {
+.tools-resources .button:hover {
+  background-color: #edd638;
+}
+
+/* Posts Section */
+.posts {
+  padding: 4rem 2rem; /* Consistent padding for posts section */
+  background: #000000; /* Consistent dark theme */
+}
+
+.posts p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Matches About section body text */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Stay Tuned for Updates Section */
+.subscribe-section {
+  padding: 3rem 2rem;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 8px;
+  margin: 2rem 0;
+  color: rgba(255, 255, 255, 0.9); /* High visibility */
+  text-align: center;
+}
+
+.subscribe-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #38b6ff; /* Matches theme color */
+}
+
+.subscribe-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.subscribe-section input[type="email"] {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
   border: none;
-  background-color: #38b6ff; /* Initials color */
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.subscribe-section button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #38b6ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 8px #38b6ff, 0 0 12px #38b6ff;
+  transition: background-color 0.3s;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: #edd638; /* Hover color */
-  transform: scale(1.05);
-  box-shadow: 0 0 12px #edd638, 0 0 16px #edd638;
+.subscribe-section button:hover {
+  background-color: #edd638; /* Hover effect for subscribe button */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .home-header h1 {
-    font-size: 2rem;
-  }
+.posts a {
+  color: #38b6ff;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-  .home-header p {
-    font-size: 1rem;
-  }
+.posts a:hover {
+  color: #edd638; /* Hover effect for post links */
+}
 
-  .section-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .donation-button {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
+.support-section {
+  padding: 3rem 2rem; /* Padding for Support Us */
+  background: rgba(0, 0, 0, 0.8); /* Slightly more transparent */
+  color: #fff;
+  text-align: center;
 }
