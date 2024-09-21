@@ -3,34 +3,33 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333; /* Don't change this */
-  background: #000000; /* Background color from logo */
-  background-image: url("/assets/images/Harmoniza-body-background-image.jpg"); /* Relative path to background image */
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center; /* Centers the background image */
-  background-attachment: fixed; /* Makes sure the background is fixed while scrolling */
+  color: #333;
+  background: #000000;
+  background-image: url("/assets/images/Harmoniza-body-background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Navigation Styling */
+/* Navigation Styling with logo updates */
 nav {
-  background: linear-gradient(
-    135deg,
-    #000000 0%,
-    #000000 100%
-  ); /* Gradient background for a modern look */
+  background: linear-gradient(135deg, #000000 0%, #000000 100%);
   color: #fff;
-  padding: 2rem 3rem; /* Adjusted padding */
-  box-shadow: none; /* Removed shadow */
+  padding: 1.5rem 2.5rem; /* Reduced padding for smaller height */
+  box-shadow: none;
   transition: background 0.3s, padding 0.3s;
 }
 
 nav:hover {
-  background: linear-gradient(
-    135deg,
-    #333333 0%,
-    #000000 100%
-  ); /* Subtle hover effect */
-  padding: 2.5rem 3.5rem; /* Smooth increase on hover */
+  background: linear-gradient(135deg, #333333 0%, #000000 100%);
+  padding: 2rem 3rem; /* Subtle increase on hover */
+}
+
+/* Logo Styling */
+nav .logo {
+  height: 50px; /* Keep logo size the same */
+  width: auto;
+  margin-right: 20px; /* Add space between the logo and the Home link */
 }
 
 nav ul {
@@ -47,8 +46,12 @@ nav ul li {
   position: relative;
 }
 
+nav ul li.logo {
+  margin-right: 30px; /* Ensure logo has proper spacing next to the Home link */
+}
+
 nav ul li a {
-  color: #38b6ff; /* Initial color */
+  color: #38b6ff;
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.5rem 0;
@@ -61,9 +64,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #edd638; /* Hover color */
+  color: #edd638;
   background-position: 0 100%;
-  transform: translateY(-3px); /* Slight lift effect */
+  transform: translateY(-3px);
+}
+
+/* Glowing animation for the logo */
+nav .logo:hover {
+  border-color: #38b6ff;
+  box-shadow: 0 0 10px 5px rgba(56, 182, 255, 0.5);
+  transition: box-shadow 0.4s ease-in-out, border-color 0.4s;
 }
 
 /* Header Styling for Homepage */

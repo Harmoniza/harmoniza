@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="{{ "/assets/images/favicon.ico" | relative_url }}" type="image/x-icon">
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
 </head>
 <body>
 
-  <!-- Navigation Menu -->
+  <!-- Navigation Menu with Logo -->
   <nav class="site-nav">
     <ul class="nav-list">
+      <li class="nav-item">
+        <a href="{{ "/" | relative_url }}" class="nav-link">
+          <img src="{{ "/assets/images/Harmoniza_Logo.png" | relative_url }}" alt="Logo" class="logo"> <!-- Logo added here -->
+        </a>
+      </li>
       <li class="nav-item"><a href="{{ "/" | relative_url }}" class="nav-link">Home</a></li>
       <li class="nav-item"><a href="{{ "/about/" | relative_url }}" class="nav-link">About</a></li>
       <li class="nav-item"><a href="{{ "/full_tracks/" | relative_url }}" class="nav-link">Full Tracks</a></li>
