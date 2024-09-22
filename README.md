@@ -20,7 +20,7 @@ Our mission is to make professional music production tools accessible to all cre
 - 💬 Feel free to reach out if you have any questions or suggestions.
 
 ### How to Reach Us
-- 📫 Email: contact@harmoniza.com
+- 📫 Email: el602444@gmail.com
 - 🌐 Website: [Harmoniza](https://harmoniza.com)
 
 Thank you for visiting Harmoniza. We hope our resources help you create amazing projects!
