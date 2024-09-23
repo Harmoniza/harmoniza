@@ -5,7 +5,7 @@ body {
   padding: 0;
   color: #333;
   background: #000000;
-  background-image: url("/assets/images/Harmoniza-body-background-image.JPG");
+  background-image: url("/assets/images/Harmoniza-body-background-image.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -81,7 +81,7 @@ nav .logo:hover {
   text-align: center;
   color: #ffffff;
   padding: 5rem 1rem; /* Increased padding to blend with larger background */
-  background: url("/assets/images/Harmoniza-header-background-image.JPG")
+  background: url("/assets/images/Harmoniza-header-background-image.jpg")
     no-repeat center center;
   background-size: cover;
   background-blend-mode: darken;
