@@ -293,7 +293,41 @@ footer ul li a:hover {
 .posts p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8); /* Matching About and Tools sections */
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-header {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-header p {
+    font-size: 1rem;
+  }
+
+  .explore-sections h2 {
+    font-size: 1.8rem;
+  }
 }
