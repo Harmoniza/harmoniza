@@ -11,25 +11,30 @@ body {
   background-attachment: fixed;
 }
 
-/* Navigation Styling with logo updates */
+/* Navigation Styling */
 nav {
-  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent to blend with background */
   color: #fff;
-  padding: 1.5rem 2.5rem; /* Reduced padding for smaller height */
+  padding: 1.5rem 2.5rem; /* Increased padding for more visibility */
   box-shadow: none;
-  transition: background 0.3s, padding 0.3s;
+  transition: background 0.3s ease-in-out, padding 0.3s;
 }
 
 nav:hover {
-  background: linear-gradient(135deg, #333333 0%, #000000 100%);
-  padding: 2rem 3rem; /* Subtle increase on hover */
+  background: rgba(0, 0, 0, 0.7); /* Darker on hover */
+  padding: 2rem 3rem;
 }
 
 /* Logo Styling */
 nav .logo {
-  height: 50px; /* Keep logo size the same */
+  height: 50px;
   width: auto;
-  margin-right: 20px; /* Add space between the logo and the Home link */
+  margin-right: 20px;
 }
 
 nav ul {
@@ -43,11 +48,10 @@ nav ul {
 
 nav ul li {
   margin: 0 15px;
-  position: relative;
 }
 
 nav ul li.logo {
-  margin-right: 30px; /* Ensure logo has proper spacing next to the Home link */
+  margin-right: 30px;
 }
 
 nav ul li a {
@@ -57,8 +61,12 @@ nav ul li a {
   padding: 0.5rem 0;
   display: inline-block;
   position: relative;
-  transition: color 0.3s, background-color 0.3s, transform 0.3s;
-  background: linear-gradient(to bottom, transparent 70%, #000000 30%);
+  transition: color 0.3s, transform 0.3s;
+  background: linear-gradient(
+    to bottom,
+    transparent 70%,
+    rgba(0, 0, 0, 0.3) 30%
+  );
   background-size: 100% 200%;
   background-position: 0 0;
 }
@@ -80,44 +88,39 @@ nav .logo:hover {
 .home-header {
   text-align: center;
   color: #ffffff;
-  padding: 5rem 1rem; /* Increased padding to blend with larger background */
+  padding: 6rem 1rem; /* Larger padding for smooth transition */
   background: url("/assets/images/Harmoniza-header-background-image.jpg")
     no-repeat center center;
   background-size: cover;
   background-blend-mode: darken;
-  border-bottom: 5px solid #edd638; /* Accent line to match hover color */
+  border-bottom: 5px solid #edd638;
 }
 
 .home-header h1 {
   margin: 0;
-  font-size: 4rem; /* Increased font size for prominence */
-  color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Subtle transparency with high visibility */
+  font-size: 4.5rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .home-header p {
-  font-size: 1.5rem; /* Larger text for better readability */
+  font-size: 1.5rem;
   margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.8); /* Subtle transparency for secondary text */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Explore Sections Styling */
 .explore-sections {
-  padding: 4rem 2rem; /* Adjusting padding for better spacing below header */
-  background: #030303; /* Dark background to match theme */
+  padding: 4rem 2rem;
+  background: #030303;
 }
 
 .explore-sections h2 {
   color: #ffffff;
   text-align: center;
-  margin-bottom: 3rem; /* Increased space to give breathing room */
-  font-size: 2.5rem; /* Increased font size for emphasis */
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .section-grid {
@@ -163,15 +166,11 @@ nav .logo:hover {
 
 /* Footer Styling */
 footer {
-  background: linear-gradient(
-    135deg,
-    #000000 0%,
-    #333333 100%
-  ); /* Consistent gradient */
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
   color: #fff;
-  padding: 3rem; /* Larger footer to balance the design */
+  padding: 3rem;
   text-align: center;
-  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -217,7 +216,7 @@ footer ul li {
 }
 
 footer ul li a {
-  color: #38b6ff; /* Initial color */
+  color: #38b6ff;
   text-decoration: none;
   font-size: 1rem;
   position: relative;
@@ -225,28 +224,28 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: #edd638; /* Hover color */
-  text-shadow: 0 0 6px #38b6ff, 0 0 10px #38b6ff; /* Added text-shadow on hover */
+  color: #edd638;
+  text-shadow: 0 0 6px #38b6ff, 0 0 10px #38b6ff;
 }
 
 /* About Page Styling */
 .about-container {
   padding: 4rem 2rem;
-  background: #000000; /* Dark theme background */
-  color: #ffffff; /* White text */
+  background: #000000;
+  color: #ffffff;
 }
 
 .about-header h1 {
   text-align: center;
   font-size: 3rem;
-  color: #38b6ff; /* Matching the primary theme color */
+  color: #38b6ff;
   margin-bottom: 2rem;
   transition: color 0.3s, transform 0.3s;
 }
 
 .about-header h1:hover {
-  color: #edd638; /* Hover effect color */
-  transform: scale(1.05); /* Slight lift on hover */
+  color: #edd638;
+  transform: scale(1.05);
 }
 
 .about-header p {
@@ -255,19 +254,19 @@ footer ul li a:hover {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+  color: rgba(255, 255, 255, 0.8);
 }
 
-/* Padding for 'Tools and Resources' Section */
+/* Tools and Resources Section Styling */
 .tools-resources {
-  padding: 4rem 2rem; /* Matching padding for consistency */
-  background: #000000; /* Dark background */
+  padding: 4rem 2rem;
+  background: #000000;
 }
 
 .tools-resources p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8); /* Matches the About section body text */
+  color: rgba(255, 255, 255, 0.8);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -284,50 +283,22 @@ footer ul li a:hover {
   background-color: #edd638;
 }
 
-/* Posts Section */
-.posts {
-  padding: 4rem 2rem; /* Consistent padding for posts section */
-  background: #000000; /* Consistent dark theme */
-}
-
-.posts p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8); /* Matching About and Tools sections */
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Responsive Styles */
+/* Responsive Styling */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .section-grid {
-    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .home-header {
+    padding: 4rem 1rem;
+  }
+
+  .explore-sections {
     padding: 3rem 1rem;
   }
-}
 
-@media (max-width: 480px) {
-  .home-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .home-header p {
-    font-size: 1rem;
-  }
-
-  .explore-sections h2 {
-    font-size: 1.8rem;
+  footer {
+    padding: 2rem 1rem;
   }
 }

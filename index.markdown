@@ -49,8 +49,8 @@ title: Home
   <section class="subscribe-section">
     <h2>Stay Tuned for Updates!</h2>
     <p>Join our community and never miss a new release.</p>
-    <form class="subscribe-form">
-      <input type="email" placeholder="Enter your email to subscribe" class="subscribe-input">
+    <form class="subscribe-form" action="/subscribe" method="post">
+      <input type="email" id="email" name="email" placeholder="Enter your email to subscribe" class="subscribe-input" required>
       <button type="submit" class="subscribe-button">Subscribe</button>
     </form>
   </section>
