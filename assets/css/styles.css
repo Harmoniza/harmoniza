@@ -1,286 +1,299 @@
-/* Base Styles */
+/* General Styling */
 body {
-  font-family: "Helvetica", sans-serif;
-  color: #444;
-  background-color: #ececec;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+  color: #333;
+  background: #000000;
+  background-image: url("/assets/images/Harmoniza-body-background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Navigation Menu */
-.site-nav {
-  background-color: #333;
-  padding: 10px;
+/* Navigation Styling with logo updates */
+nav {
+  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+  color: #fff;
+  padding: 1.5rem 2.5rem; /* Reduced padding for smaller height */
+  box-shadow: none;
+  transition: background 0.3s, padding 0.3s;
 }
 
-.nav-list {
-  display: flex;
-  justify-content: center;
+nav:hover {
+  background: linear-gradient(135deg, #333333 0%, #000000 100%);
+  padding: 2rem 3rem; /* Subtle increase on hover */
+}
+
+/* Logo Styling */
+nav .logo {
+  height: 50px; /* Keep logo size the same */
+  width: auto;
+  margin-right: 20px; /* Add space between the logo and the Home link */
+}
+
+nav ul {
+  list-style-type: none;
   padding: 0;
   margin: 0;
-  list-style: none;
-}
-
-.nav-item {
-  margin: 0 15px;
-}
-
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #ff5722;
-}
-
-.logo {
-  height: 40px;
-  vertical-align: middle;
-}
-
-/* Main Content Area */
-.container {
-  padding: 20px;
-  margin: auto;
-}
-
-/* Header */
-header.home-header {
-  background: linear-gradient(135deg, #ff5722, #ff9800);
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-header.home-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0;
-  padding: 20px;
-  position: relative;
-  animation: fadeIn 2s ease-out;
-}
-
-header.home-header p {
-  font-size: 1.5rem;
-  color: #f0f0f0;
-  margin: 0;
-  padding: 10px 0;
-  animation: slideIn 2s ease-out;
-}
-
-/* Sections */
-.explore-sections,
-.tools-resources,
-.subscribe-section {
-  margin: 30px auto;
-  padding: 30px;
-  max-width: 900px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-}
-
-.explore-sections h2,
-.tools-resources h2,
-.subscribe-section h2 {
-  font-size: 2.2rem;
-  color: #333;
-  border-bottom: 3px solid #ff5722;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-
-.explore-sections p,
-.tools-resources p,
-.subscribe-section p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.8;
-}
-
-/* Section Grid */
-.section-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
-}
-
-.section-card {
-  flex: 1 1 200px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.section-card h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.section-card p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.section-link {
-  color: #ff5722;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.section-link:hover {
-  color: #e64a19;
-  text-decoration: underline;
-}
-
-/* Buttons */
-button,
-.donation-button,
-.main-link {
-  background-color: #ff5722;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 12px 25px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover,
-.donation-button:hover,
-.main-link:hover {
-  background-color: #e64a19;
-  transform: scale(1.05);
-}
-
-/* Form */
-.subscribe-form {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.subscribe-input {
-  width: 100%;
-  max-width: 600px;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 2px solid #ff5722;
-  border-radius: 5px;
-  transition: border-color 0.3s ease;
+nav ul li {
+  margin: 0 15px;
+  position: relative;
 }
 
-.subscribe-input:focus {
-  border-color: #e64a19;
-  outline: none;
+nav ul li.logo {
+  margin-right: 30px; /* Ensure logo has proper spacing next to the Home link */
 }
 
-.subscribe-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.subscribe-button:hover {
-  background-color: #388e3c;
-  transform: scale(1.05);
-}
-
-/* Footer */
-.site-footer {
-  background-color: #333;
-  color: #ddd;
-  text-align: center;
-  padding: 30px;
-  margin-top: 30px;
-}
-
-.site-footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.site-footer .social-links {
-  padding: 0;
-}
-
-.site-footer .social-link {
-  color: #ff5722;
+nav ul li a {
+  color: #38b6ff;
   text-decoration: none;
-  margin: 0 12px;
-  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+  background: linear-gradient(to bottom, transparent 70%, #000000 30%);
+  background-size: 100% 200%;
+  background-position: 0 0;
 }
 
-.site-footer .social-link:hover {
-  color: #e64a19;
-  text-decoration: underline;
+nav ul li a:hover {
+  color: #edd638;
+  background-position: 0 100%;
+  transform: translateY(-3px);
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Glowing animation for the logo */
+nav .logo:hover {
+  border-color: #38b6ff;
+  box-shadow: 0 0 10px 5px rgba(56, 182, 255, 0.5);
+  transition: box-shadow 0.4s ease-in-out, border-color 0.4s;
+}
 
-  .nav-item {
-    margin: 10px 0;
-  }
+/* Header Styling for Homepage */
+.home-header {
+  text-align: center;
+  color: #ffffff;
+  padding: 5rem 1rem; /* Increased padding to blend with larger background */
+  background: url("/assets/images/Harmoniza-header-background-image.jpg")
+    no-repeat center center;
+  background-size: cover;
+  background-blend-mode: darken;
+  border-bottom: 5px solid #edd638; /* Accent line to match hover color */
+}
 
-  .section-grid {
-    flex-direction: column;
-    align-items: center;
-  }
+.home-header h1 {
+  margin: 0;
+  font-size: 4rem; /* Increased font size for prominence */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Subtle transparency with high visibility */
+}
 
-  .section-card {
-    width: 90%;
+.home-header p {
+  font-size: 1.5rem; /* Larger text for better readability */
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.8); /* Subtle transparency for secondary text */
+}
+
+/* Explore Sections Styling */
+.explore-sections {
+  padding: 4rem 2rem; /* Adjusting padding for better spacing below header */
+  background: #030303; /* Dark background to match theme */
+}
+
+.explore-sections h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem; /* Increased space to give breathing room */
+  font-size: 2.5rem; /* Increased font size for emphasis */
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.section-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.section-card h3 {
+  margin: 0.5rem 0;
+  color: #38b6ff;
+}
+
+.section-card p {
+  color: #070707;
+}
+
+.section-link {
+  color: #38b6ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.section-link:hover {
+  color: #edd638;
+  text-shadow: 0 0 4px #edd638, 0 0 6px #edd638;
+}
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #333333 100%
+  ); /* Consistent gradient */
+  color: #fff;
+  padding: 3rem; /* Larger footer to balance the design */
+  text-align: center;
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+footer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  opacity: 0.3;
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
   }
 }
 
-@media (max-width: 480px) {
-  header.home-header h1 {
-    font-size: 2.5rem;
-  }
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  header.home-header p {
-    font-size: 1.2rem;
-  }
+footer ul li {
+  margin: 0 10px;
+}
 
-  .section-card {
-    width: 100%;
-  }
+footer ul li a {
+  color: #38b6ff; /* Initial color */
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s, text-shadow 0.3s;
+}
 
-  button,
-  .donation-button,
-  .main-link {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-  }
+footer ul li a:hover {
+  color: #edd638; /* Hover color */
+  text-shadow: 0 0 6px #38b6ff, 0 0 10px #38b6ff; /* Added text-shadow on hover */
+}
 
-  .subscribe-input,
-  .subscribe-button {
-    width: 100%;
-    font-size: 1rem;
-  }
+/* About Page Styling */
+.about-container {
+  padding: 4rem 2rem;
+  background: #000000; /* Dark theme background */
+  color: #ffffff; /* White text */
+}
+
+.about-header h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #38b6ff; /* Matching the primary theme color */
+  margin-bottom: 2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.about-header h1:hover {
+  color: #edd638; /* Hover effect color */
+  transform: scale(1.05); /* Slight lift on hover */
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+}
+
+/* Padding for 'Tools and Resources' Section */
+.tools-resources {
+  padding: 4rem 2rem; /* Matching padding for consistency */
+  background: #000000; /* Dark background */
+}
+
+.tools-resources p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Matches the About section body text */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tools-resources .button {
+  background-color: #38b6ff;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.tools-resources .button:hover {
+  background-color: #edd638;
+}
+
+/* Posts Section */
+.posts {
+  padding: 4rem 2rem; /* Consistent padding for posts section */
+  background: #000000; /* Consistent dark theme */
+}
+
+.posts p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Body text color */
+  max-width: 800px;
+  margin: 0 auto;
 }
