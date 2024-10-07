@@ -6,7 +6,7 @@ title: Home
 <div class="home-container">
   <header class="home-header">
     <h1>Welcome to Harmoniza</h1>
-    <p>Discover a wide range of high-quality, royalty-free music tracks and resources designed to elevate your projects.</p>
+    <p>Discover a wide range of high-quality, royalty-free music tracks and resources designed to elevate your projects. Here at Harmoniza, we believe in empowering your creativity by allowing you to pay what you want for the music that inspires you.</p>
   </header>
 
   <section class="explore-sections">
