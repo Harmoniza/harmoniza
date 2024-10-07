@@ -9,6 +9,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat; /* Prevent image from repeating */
+  color: #e0e0e0; /* Lighten the body text color */
 }
 
 /* Header Styles */
@@ -55,10 +56,13 @@ header h1:hover {
 }
 
 /* Navigation Menu */
+nav {
+  text-align: center; /* Center the navigation */
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
-  text-align: center;
   background: rgba(0, 0, 0, 0.7);
   margin: 10px auto;
   border-radius: 10px;
@@ -150,7 +154,7 @@ section {
 }
 
 .section-card p {
-  color: #ffffff;
+  color: #e0e0e0; /* Lighter color for better contrast */
 }
 
 /* Links Styling */
