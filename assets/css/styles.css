@@ -1,13 +1,14 @@
 /* General Body Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Keep your font settings */
   margin: 0;
   padding: 0;
-  background: #000000;
-  background-image: url("/assets/images/Harmoniza-body-background-image.jpg");
+  background: #000000; /* Fallback color */
+  background-image: url("../images/Harmoniza-body-background-image.jpg"); /* Relative path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat; /* Prevent image from repeating */
 }
 
 /* Header Styles */
