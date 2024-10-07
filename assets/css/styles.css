@@ -14,10 +14,18 @@ body {
 /* Header Styles */
 header {
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-  padding: 20px;
+  padding: 10px 20px; /* Reduced padding for a smaller header */
   text-align: center;
   position: relative;
   z-index: 100;
+}
+
+/* Logo Styling */
+header img {
+  width: 100px; /* Further reduced size for the logo */
+  height: auto;
+  transition: width 0.3s ease;
+  padding: 0; /* Removed padding from logo */
 }
 
 header h1 {
@@ -52,19 +60,20 @@ nav ul {
   padding: 0;
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
-  padding: 10px;
+  margin: 10px auto;
   border-radius: 10px;
+  display: inline-block; /* Center the navigation */
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin-right: 20px;
 }
 
 nav ul li a {
   color: #38b6ff;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 4px;
   transition: color 0.3s, background-color 0.3s, transform 0.3s;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
@@ -174,6 +183,19 @@ footer p {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Social Links Centering */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centering social links */
+}
+
+.social-links li {
+  margin: 0 10px; /* Margin between social links */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   header h1 {
@@ -182,7 +204,19 @@ footer p {
   #welcome h2 {
     font-size: 3rem;
   }
+  nav ul {
+    display: block;
+    width: 100%; /* Full width for mobile */
+  }
+  nav ul li {
+    display: block; /* Stack the nav items vertically */
+    margin-bottom: 10px;
+  }
   nav ul li a {
-    padding: 8px;
+    display: block;
+    padding: 10px; /* Increase padding for easier tapping on touch screens */
+  }
+  header img {
+    width: 80px; /* Make the logo smaller for mobile */
   }
 }
