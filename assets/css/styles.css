@@ -1,53 +1,45 @@
 /* General Body Styles */
 body {
-  font-family: Arial, sans-serif; /* Keep your font settings */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #000000; /* Fallback color */
-  background-image: url("../images/Harmoniza-body-background-image.jpg"); /* Relative path */
+  background: #000000;
+  background-image: url("../images/Harmoniza-body-background-image.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-repeat: no-repeat; /* Prevent image from repeating */
-  color: #e0e0e0; /* Lighten the body text color */
+  background-repeat: no-repeat;
+  color: #f0f0f0;
 }
 
 /* Header Styles */
 header {
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-  padding: 10px 20px; /* Reduced padding for a smaller header */
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px 20px;
   text-align: center;
   position: relative;
   z-index: 100;
 }
 
-/* Logo Styling */
-header img {
-  width: 100px; /* Further reduced size for the logo */
-  height: auto;
-  transition: width 0.3s ease;
-  padding: 0; /* Removed padding from logo */
-}
-
 header h1 {
-  color: #ffffff;
-  font-size: 3rem;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+  color: #38b6ff; /* Bright blue */
+  font-size: 5rem;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
   opacity: 0;
-  animation: fadeInTitle 1.5s ease-in-out forwards;
+  animation: fadeInTitle 2s ease-in-out forwards;
   transition: transform 0.3s, text-shadow 0.3s;
 }
 
 header h1:hover {
-  transform: scale(1.1);
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  transform: rotate(-2deg) scale(1.15);
+  text-shadow: 0 6px 14px rgba(0, 0, 0, 0.9);
 }
 
 /* Title Fade-In Animation */
 @keyframes fadeInTitle {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
@@ -57,7 +49,7 @@ header h1:hover {
 
 /* Navigation Menu */
 nav {
-  text-align: center; /* Center the navigation */
+  text-align: center;
 }
 
 nav ul {
@@ -66,7 +58,7 @@ nav ul {
   background: rgba(0, 0, 0, 0.7);
   margin: 10px auto;
   border-radius: 10px;
-  display: inline-block; /* Center the navigation */
+  display: inline-block;
 }
 
 nav ul li {
@@ -80,147 +72,613 @@ nav ul li a {
   padding: 10px 15px;
   border-radius: 4px;
   transition: color 0.3s, background-color 0.3s, transform 0.3s;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 nav ul li a:hover {
-  color: #edd638;
-  background-color: rgba(0, 0, 0, 0.8); /* Darken on hover */
+  color: #c55343;
+  background-color: #edd638;
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Container for the release section */
+.release-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Depth effect */
+  color: #f0f0f0; /* Light text color */
+}
+
+/* Header styles */
+.release-container h1 {
+  padding: 20px 0;
+  font-size: 2.5em;
+  color: #ffeb3b; /* Bright accent color */
+}
+
+/* Cover art image */
+.cover-art {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Styles for each section box */
+.release-section {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+/* Section headings */
+.release-section h2 {
+  color: #ffeb3b; /* Bright accent color */
+}
+
+/* List styles for the payment options */
+ul {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0; /* Remove padding */
+}
+
+/* PayPal button styles */
+.paypal-button {
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffeb3b; /* Bright accent color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* PayPal button hover effect */
+.paypal-button:hover {
+  background-color: #f9d83f; /* Slightly darker shade on hover */
+}
+
+/* Audio controls styling */
+audio {
+  margin-top: 20px;
+  width: 100%; /* Full width */
 }
 
 /* Section Styles */
 section {
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
-  border-radius: 8px;
-  margin: 20px;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  margin: 30px;
   text-align: center;
-}
-
-/* Welcome to Harmoniza Styling */
-#welcome h2 {
-  font-size: 4rem;
-  color: #c55343; /* Highlighting with new color */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  animation: fadeInTitle 1.8s ease-in-out forwards;
-  transform: scale(1);
-  transition: transform 0.3s, text-shadow 0.3s;
-}
-
-#welcome h2:hover {
-  transform: scale(1.05); /* Slightly enlarge */
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
 }
 
 /* Explore Sections Styling */
 .explore-sections h2 {
-  color: #ffffff;
+  color: #ffeb3b;
   text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
   opacity: 0;
-  animation: fadeInTitle 2s ease-in-out forwards;
+  animation: fadeInTitle 2.5s ease-in-out forwards;
 }
 
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-/* Section Cards with Transparent Padding */
+/* Section Cards */
 .section-card {
-  background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
-  border-radius: 8px;
-  padding: 1rem;
+  background-color: rgba(255, 235, 59, 0.15);
+  border: 2px solid #38b6ff;
+  border-radius: 12px;
+  padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
 }
 
 .section-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 235, 59, 0.25);
 }
 
 .section-card h3 {
   margin: 0.5rem 0;
-  color: #38b6ff;
+  color: #ffeb3b;
 }
 
 .section-card p {
-  color: #e0e0e0; /* Lighter color for better contrast */
+  color: #f0f0f0;
 }
 
-/* Links Styling */
-a {
-  color: #38b6ff;
+.bold .category-link,
+.bold .genre-link {
+  background-color: #1f8a70;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.bold .category-link:hover,
+.bold .genre-link:hover {
+  background-color: #16a085;
+}
+
+.blog-post-item {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.blog-post-item:hover {
+  transform: translateY(-5px);
+}
+
+.blog-link {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4caf50;
   text-decoration: none;
-  padding: 0.2rem;
-  border-radius: 4px;
-  transition: color 0.3s, background-color 0.3s, transform 0.3s;
-  background: rgba(0, 0, 0, 0.3); /* More subtle transparent background */
 }
 
-a:hover {
-  color: #edd638;
-  background: rgba(0, 0, 0, 0.6); /* Darken background */
-  transform: translateY(-2px);
+.blog-link:hover {
+  color: #388e3c;
 }
 
-/* Footer Styles */
-footer {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  text-align: center;
+.post-date {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* General Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* Footer Text Styling */
-footer p {
-  margin: 0.5rem 0;
-  color: rgba(255, 255, 255, 0.8);
+/* Post Section */
+.post-section {
+  margin: 40px 0;
 }
 
-/* Social Links Centering */
+.post-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Post Grid */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Post Card */
+.post-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Post Title */
+.post-title {
+  font-size: 1.5rem;
+  color: #2196f3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post-title:hover {
+  color: #1976d2;
+}
+
+/* Post Excerpt */
+.post-card p {
+  margin: 15px 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Read More Button */
+.read-more {
+  color: #fff;
+  background-color: #4caf50;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #388e3c;
+}
+
+/* RSS Container */
+.rss-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* RSS Subscribe Button Styling */
+.rss-subscribe {
+  color: #fff;
+  background-color: #2196f3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.rss-subscribe:hover {
+  background-color: #1976d2;
+}
+
+/* Donation Button */
+.donation-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.donation-button {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.donation-button:hover {
+  background-color: #e64a19;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
 .social-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.social-link {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ff9800;
+}
+
+/* Links Styling */
+a.section-link {
+  color: #000000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  background: #ffeb3b;
+}
+
+a.section-link:hover {
+  background: #ffc107;
+  transform: translateY(-3px);
+}
+
+/* New Feature Section */
+.feature-section {
+  padding: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.feature-section h2 {
+  color: #38b6ff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.feature-section p {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Feature Section Buttons */
+.feature-section .feature-btn {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.feature-btn:hover {
+  transform: scale(1.1);
+  background-color: #ffc107;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* General Styles for Success, Cancel, and Thank You Pages */
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  color: #f0f0f0;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.page-container:hover {
+  transform: scale(1.02);
+}
+
+/* Page Title Styles */
+.page-title {
+  font-size: 2.5rem;
+  color: #ffeb3b; /* Accent color */
+  margin-bottom: 20px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Page Message Styles */
+.page-message {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+/* Button Styles */
+.button {
+  background-color: #38b6ff; /* Harmoniza Main Color */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #c55343; /* Hover color */
+  transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-message {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+  }
+}
+
+/* Footer Styles */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 100;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #ffeb3b;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-link {
+  margin: 0 10px;
+  color: #ffeb3b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #c55343;
+}
+
+/* Donation Button */
+.donation-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.donation-button {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.donation-button:hover {
+  background-color: #c55343;
+  color: #fff;
+}
+
+/* About Page Styling */
+.about-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #2d2d2d; /* Main Text Color */
+}
+
+.about-header {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.about-header h1 {
+  font-size: 2.8rem;
+  color: #38b6ff; /* Harmoniza Main Color */
+  margin-bottom: 15px;
+}
+
+.about-header p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.about-offer,
+.about-mission,
+.about-why,
+.contact-us {
+  margin: 40px 0;
+  padding: 30px;
+  background-color: #f0f4f8; /* Light background for sections */
+  border-radius: 10px;
+}
+
+.about-offer h2,
+.about-mission h2,
+.about-why h2,
+.contact-us h2 {
+  font-size: 2rem;
+  color: #ffeb3b; /* Secondary Harmoniza Color */
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  width: 45%;
+}
+
+.about-offer ul,
+.about-mission ul,
+.about-why ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* Centering social links */
 }
 
-.social-links li {
-  margin: 0 10px; /* Margin between social links */
+.about-offer ul li,
+.about-mission ul li,
+.about-why ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
 }
 
-/* Responsive Adjustments */
+.about-offer ul li::before,
+.about-mission ul li::before,
+.about-why ul li::before {
+  content: "•";
+  color: #38b6ff; /* Harmoniza Main Color */
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.contact-us {
+  text-align: center;
+}
+
+.contact-us a.contact-link {
+  color: #c55343;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-us a.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Padding and responsive adjustments */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.5rem;
+  .about-container {
+    width: 95%;
   }
-  #welcome h2 {
-    font-size: 3rem;
+
+  .columns {
+    flex-direction: column;
   }
-  nav ul {
-    display: block;
-    width: 100%; /* Full width for mobile */
+
+  .column {
+    width: 100%;
   }
-  nav ul li {
-    display: block; /* Stack the nav items vertically */
-    margin-bottom: 10px;
+
+  .about-header h1 {
+    font-size: 2.2rem;
   }
-  nav ul li a {
-    display: block;
-    padding: 10px; /* Increase padding for easier tapping on touch screens */
-  }
-  header img {
-    width: 80px; /* Make the logo smaller for mobile */
+
+  .about-offer h2,
+  .about-mission h2,
+  .about-why h2,
+  .contact-us h2 {
+    font-size: 1.8rem;
   }
 }

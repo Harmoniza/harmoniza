@@ -12,18 +12,25 @@ permalink: /about/
 
   <section class="about-offer">
     <h2>What We Offer</h2>
-    <ul>
-      <li><strong>Loops:</strong> Seamlessly crafted loops to build rhythm.</li>
-      <li><strong>Chord Progressions:</strong> Inspiring chord progressions to kickstart your next hit.</li>
-      <li><strong>Sound Effects:</strong> Unique sound effects to elevate your audio creations.</li>
-      <li><strong>Vocals:</strong> Professionally recorded vocal samples to bring your productions to life.</li>
-      <li><strong>Full Tracks:</strong> Ready-to-use music tracks for your projects.</li>
-    </ul>
+    <div class="columns">
+      <div class="column">
+        <ul>
+          <li><strong>Loops:</strong> Seamlessly crafted loops to build rhythm.</li>
+          <li><strong>Chord Progressions:</strong> Inspiring chord progressions to kickstart your next hit.</li>
+        </ul>
+      </div>
+      <div class="column">
+        <ul>
+          <li><strong>Sound Effects:</strong> Unique sound effects to elevate your audio creations.</li>
+          <li><strong>Vocals:</strong> Professionally recorded vocal samples to bring your productions to life.</li>
+          <li><strong>Full Tracks:</strong> Ready-to-use music tracks for your projects.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="about-mission">
     <h2>Our Mission</h2>
-    <p>We aim to:</p>
     <ul>
       <li>Deliver top-quality, royalty-free music and resources.</li>
       <li>Make creative tools accessible and affordable for everyone.</li>
