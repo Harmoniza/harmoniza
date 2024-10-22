@@ -27,11 +27,11 @@
 - **Price**: Minimum $15
 - **Details**: For users seeking broader usage rights, this license allows additional flexibility in project usage while still requiring attribution to Harmoniza. Resale or redistribution of the track remains prohibited.
 
-For further information on licensing and usage, please refer to our terms on the [Harmoniza website](http://127.0.0.1:4000/).
+For further information on licensing and usage, please refer to our terms on the [Harmoniza website](https://harmoniza.github.io/harmoniza/).
 
 ## Download Links
 
-- [Download MP3](http://127.0.0.1:4000/full_tracks/ambient/shadows_in_the_forest/Shadows_in_the_Forest.mp3)
+- [Download MP3](https://harmoniza.github.io/harmoniza/full_tracks/ambient/shadows_in_the_forest/Shadows_in_the_Forest.mp3)
 
 ## Pay What You Want
 
@@ -47,13 +47,13 @@ Your generous support helps us create more music and reach a wider audience!
 
 ### Buy Commercial License
 
-<form action="http://localhost:3000/pay" method="post">
+<form action="http://https://harmoniza.github.io/harmoniza/pay" method="post">
   <input type="submit" value="Buy Commercial License for $3" />
 </form>
 
 ### Buy Extended License
 
-<form action="http://localhost:3000/pay/extended" method="post">
+<form action="https://harmoniza.github.io/harmoniza/extended" method="post">
   <input type="submit" value="Buy Extended License for $15" />
 </form>
 
@@ -64,6 +64,6 @@ Your generous support helps us create more music and reach a wider audience!
 ## Audio Preview
 
 <audio controls>
-  <source src="http://127.0.0.1:4000/full_tracks/ambient/shadows_in_the_forest/Shadows_in_the_Forest.mp3" type="audio/mpeg">
+  <source src="https://harmoniza.github.io/harmoniza/full_tracks/ambient/shadows_in_the_forest/Shadows_in_the_Forest.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
