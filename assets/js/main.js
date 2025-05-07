@@ -1,29 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Audio element reference
-  const audioPlayer = document.getElementById("audioPlayer");
-  const playButton = document.getElementById("playButton");
-  const pauseButton = document.getElementById("pauseButton");
-  const seekBar = document.getElementById("seekBar");
+  const toggleButton = document.querySelector("#toggle-dark-mode");
+  const currentMode = localStorage.getItem("theme") || "light";
 
-  // Play button functionality
-  playButton.addEventListener("click", function () {
-    audioPlayer.play();
-  });
+  if (currentMode === "dark") {
+    document.body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️ Toggle Light Mode";
+  } else {
+    toggleButton.textContent = "🌙 Toggle Dark Mode";
+  }
 
-  // Pause button functionality
-  pauseButton.addEventListener("click", function () {
-    audioPlayer.pause();
-  });
+  toggleButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+    const isDarkMode = document.body.classList.contains("dark-mode");
 
-  // Update seek bar as audio plays
-  audioPlayer.addEventListener("timeupdate", function () {
-    const value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-    seekBar.value = value;
-  });
-
-  // Allow user to seek the audio by changing seek bar value
-  seekBar.addEventListener("input", function () {
-    const seekTo = audioPlayer.duration * (seekBar.value / 100);
-    audioPlayer.currentTime = seekTo;
+    if (isDarkMode) {
+      localStorage.setItem("theme", "dark");
+      toggleButton.textContent = "☀️ Toggle Light Mode";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggleButton.textContent = "🌙 Toggle Dark Mode";
+    }
   });
 });

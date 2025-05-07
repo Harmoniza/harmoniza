@@ -3,12 +3,10 @@
 # Site settings
 title: Harmoniza
 email: el602444@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Harmoniza is your go-to source for high-quality, royalty-free music and audio resources. 
-  We provide loops, chord progressions, sound effects, vocals, and full tracks designed to elevate your projects. 
-  Our mission is to make professional music production tools accessible to all creators.
-baseurl: "/harmoniza" # the subpath of your site, e.g. /blog
-url: "https://harmoniza.github.io/harmoniza/" # the base hostname & protocol for your site, e.g. http://example.com
+description: >-
+  Explore high-quality, royalty-free music tracks and resources designed to elevate your creative projects. At Harmoniza, you have the freedom to pay what you want for the music that inspires you.
+baseurl: "" # Set to /harmoniza when deploying to GitHub Pages
+url: "http://127.0.0.1:4000/" # Update to https://Harmoniza.github.io when deploying
 github_username: Harmoniza
 
 # Social links
@@ -16,22 +14,43 @@ bandlab_url: https://www.bandlab.com/harmoniza_
 bandcamp_url: https://harmoniza.bandcamp.com/
 youtube_url: https://www.youtube.com/@Harmoniza7
 
-# Build settings
+# Theme and SEO
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
-# Permalinks for blog posts
+# Theme customizations (supported by minima)
+minima:
+  skin: dark
+  social_links: true
+  navigation:
+    - title: "Home"
+      url: /
+    - title: "About"
+      url: /about/
+    - title: "Music"
+      url: /music/
+    - title: "Resources"
+      url: /tools_and_resources/
+    - title: "Blog"
+      url: /blog/
+
+# Permalinks
 permalink: /blog/:title/
+
 # Exclude from processing
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Google Analytics (if using)
+google_analytics: "UA-XXXXX-Y"

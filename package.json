@@ -1,16 +1,17 @@
 {
   "name": "harmoniza",
   "version": "1.0.0",
-  "description": "## Welcome to Harmoniza 👋",
-  "main": "index.js",
+  "description": "Harmoniza payment server",
+  "main": "paypal.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node paypal.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "dotenv": "^16.3.1",
     "express": "^4.21.1",
     "paypal-rest-sdk": "^1.8.1"
   }

@@ -1,55 +1,37 @@
 ---
 layout: default
-title: About
+title: "About Us - Harmoniza"
+description: "Discover Harmoniza - Your source for high-quality, royalty-free music loops, beats, vocals, and nature sounds."
 permalink: /about/
 ---
 
-<div class="about-container">
-  <header class="about-header">
-    <h1>About Harmoniza</h1>
-    <p>Welcome to <strong>Harmoniza</strong>, your go-to source for <strong>high-quality, royalty-free music</strong> and audio resources. We are dedicated to providing a wide range of creative tools to enhance your projects and inspire your musical journey.</p>
-  </header>
+<section class="about-section">
+  <div class="hero">
+    <h1>Welcome to Harmoniza</h1>
+    <p>Discover and connect with a world of soothing audio and visuals designed to elevate your creative journey.</p>
+  </div>
 
-  <section class="about-offer">
+  <div class="about-offer bold-style">
     <h2>What We Offer</h2>
-    <div class="columns">
-      <div class="column">
-        <ul>
-          <li><strong>Loops:</strong> Seamlessly crafted loops to build rhythm.</li>
-          <li><strong>Chord Progressions:</strong> Inspiring chord progressions to kickstart your next hit.</li>
-        </ul>
-      </div>
-      <div class="column">
-        <ul>
-          <li><strong>Sound Effects:</strong> Unique sound effects to elevate your audio creations.</li>
-          <li><strong>Vocals:</strong> Professionally recorded vocal samples to bring your productions to life.</li>
-          <li><strong>Full Tracks:</strong> Ready-to-use music tracks for your projects.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <p>Harmoniza provides high-quality, royalty-free music loops, beats, vocals, and nature sounds. Each piece is crafted to bring calm and inspiration to your projects, from lofi tracks to ambient soundscapes.</p>
+  </div>
 
-  <section class="about-mission">
+  <div class="about-mission bold-style">
     <h2>Our Mission</h2>
-    <ul>
-      <li>Deliver top-quality, royalty-free music and resources.</li>
-      <li>Make creative tools accessible and affordable for everyone.</li>
-      <li>Continuously expand and update our offerings to meet the needs of creators.</li>
-    </ul>
-  </section>
+    <p>We aim to make premium creative assets accessible to everyone. With a 'pay what you want' model, we believe creativity should be open and inclusive.</p>
+  </div>
 
-  <section class="about-why">
-    <h2>Why Harmoniza?</h2>
+  <div class="about-values bold-style">
+    <h2>Why Choose Us?</h2>
     <ul>
-      <li><strong>High-Quality:</strong> Every track is crafted for the best audio experience.</li>
-      <li><strong>Royalty-Free:</strong> Use our resources without the worry of licensing.</li>
-      <li><strong>Seamless Navigation:</strong> Easily explore and find what you need.</li>
-      <li><strong>Regular Updates:</strong> Stay tuned for fresh content regularly added to our library.</li>
+      <li>High-quality, royalty-free sounds</li>
+      <li>Supportive creative community</li>
+      <li>Affordable and flexible pricing</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="contact-us">
+  <div class="contact-us bold-style">
     <h2>Contact Us</h2>
-    <p>Have any questions or need support? Feel free to <a href="mailto:el602444@gmail.com" class="contact-link">reach out</a>. We're here to help!</p>
-  </section>
-</div>
+    <p>We’re here for you! Reach out anytime at <a href="mailto:el602444@gmail.com">el602444@gmail.com</a> with questions, ideas, or collaborations.</p>
+  </div>
+</section>
