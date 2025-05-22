@@ -4,8 +4,6 @@ title:
 permalink: /blog/
 ---
 
-# Blog & Updates
-
 Welcome to the Harmoniza blog — a space where I share music updates, creative insights, new releases, and behind-the-scenes moments.
 
 Even as a solo artist, I believe in transparency, connection, and storytelling. Here, you’ll find posts about the journey, upcoming projects, featured tracks, and resources for fellow creators.
