@@ -226,3 +226,23 @@ h3 {
 .donate-button:hover {
   background-color: #d81b60;
 }
+
+/* Centering utility for main homepage sections */
+.home-container,
+.subscribe-section,
+.contact-us {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-grid {
+  justify-items: center;
+  text-align: left; /* keep cards aligned nicely */
+}
+
+.section-card {
+  width: 100%;
+  max-width: 300px;
+}

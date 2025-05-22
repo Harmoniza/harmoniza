@@ -6,7 +6,7 @@ email: el602444@gmail.com
 description: >-
   Explore high-quality, royalty-free music tracks and resources designed to elevate your creative projects. At Harmoniza, you have the freedom to pay what you want for the music that inspires you.
 baseurl: "" # Set to /harmoniza when deploying to GitHub Pages
-url: "http://127.0.0.1:4000/" # Update to https://Harmoniza.github.io when deploying
+url: "http://127.0.0.1:4000/" # Update to https://harmoniza.github.io/harmoniza/ when deploying
 github_username: Harmoniza
 
 # Social links
@@ -19,6 +19,8 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+markdown: kramdown
 
 # Theme customizations (supported by minima)
 minima:

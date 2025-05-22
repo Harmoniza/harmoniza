@@ -15,19 +15,4 @@ permalink: /resources/
   </ul>
 </section>
 
-<!-- Support Harmoniza Section -->
-<div class="support-harmoniza bold-style">
-  <h2>Support Harmoniza</h2>
-  <p>If you find these resources valuable, consider supporting us with a small donation. Your support helps us keep providing great tools and content.</p>
-  <form action="/donate" method="post">
-    <label for="amount">Enter your donation amount:</label>
-    <input type="number" id="amount" name="amount" min="1" placeholder="e.g., 5">
-    <button type="submit" class="donate-button">Donate</button>
-  </form>
-</div>
-
-<!-- Contact Us Section -->
-<div class="contact-us bold-style">
-  <h2>Contact Us</h2>
-  <p>Have feedback or need help? Reach out at <a href="mailto:el602444@gmail.com">el602444@gmail.com</a>.</p>
-</div>
+{% include support-harmoniza.html %}

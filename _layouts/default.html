@@ -21,16 +21,13 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 </head>
 <body>
-
   <!-- Navigation -->
   <nav class="site-nav">
     <div class="nav-container">
       <a href="{{ "/" | relative_url }}" class="logo">
         <img src="{{ "/assets/images/Harmoniza_Logo.png" | relative_url }}" alt="Harmoniza Logo">
       </a>
-      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
-        ☰
-      </button>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">☰</button>
       <ul class="nav-list" id="nav-menu">
         <li class="nav-item"><a href="{{ "/" | relative_url }}" class="nav-link">Home</a></li>
         <li class="nav-item dropdown">
@@ -55,37 +52,22 @@
   </nav>
 
   <!-- Main Content -->
-  <div class="container">
+  <main class="container">
     {{ content }}
-  </div>
-
-  <!-- Latest Posts -->
-  {% if site.posts %}
-  <section class="post-section">
-    <h2>Latest Posts</h2>
-    <div class="post-grid">
-      {% for post in site.posts %}
-      <article class="post-card">
-        <h3><a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt }}</p>
-        <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
+  </main>
 
   <!-- Footer -->
+  {% include support-harmoniza.html %}
+
   <footer class="site-footer">
     <p>&copy; {{ site.title }} - All rights reserved.</p>
     <ul class="social-links">
-      {% if site.bandlab_url %}<li><a href="{{ site.bandlab_url }}" target="_blank" class="social-link">BandLab</a></li>{% endif %}
-      {% if site.bandcamp_url %}<li><a href="{{ site.bandcamp_url }}" target="_blank" class="social-link">Bandcamp</a></li>{% endif %}
-      {% if site.youtube_url %}<li><a href="{{ site.youtube_url }}" target="_blank" class="social-link">YouTube</a></li>{% endif %}
+      {% if site.bandlab_url %}<li><a href="{{ site.bandlab_url }}" target="_blank">BandLab</a></li>{% endif %}
+      {% if site.bandcamp_url %}<li><a href="{{ site.bandcamp_url }}" target="_blank">Bandcamp</a></li>{% endif %}
+      {% if site.youtube_url %}<li><a href="{{ site.youtube_url }}" target="_blank">YouTube</a></li>{% endif %}
     </ul>
   </footer>
 
-  <!-- Scripts -->
   <script src="{{ "/assets/js/main.js" | relative_url }}" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
