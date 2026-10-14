@@ -1,0 +1,321 @@
+/* =========================
+   CINEMATIC THEME VARIABLES
+========================= */
+:root {
+  --bg: #05070d;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel-border: rgba(255, 255, 255, 0.08);
+  --text: #e6e6e6;
+  --accent: #7dd3fc;
+  --accent2: #a78bfa;
+}
+
+/* =========================
+   GENERAL STYLES
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #0d1b2a, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: radial-gradient(circle at top, rgba(125,211,252,0.08), transparent 60%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.site-nav {
+  background: rgba(10,12,18,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* =========================
+   MOBILE NAV
+========================= */
+@media (max-width:768px){
+
+.hamburger{
+display:block;
+}
+
+.nav-list{
+flex-direction:column;
+background:#333;
+width:100%;
+max-height:0;
+overflow:hidden;
+transition:max-height .3s ease;
+}
+
+.nav-list.nav-open{
+max-height:500px;
+}
+
+.nav-link{
+display:block;
+padding:1rem;
+}
+
+}
+
+/* =========================
+   GRID + CARDS
+========================= */
+
+.section-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:1rem;
+}
+
+.section-card{
+background:var(--panel);
+border:1px solid var(--panel-border);
+backdrop-filter:blur(12px);
+padding:1.2rem;
+border-radius:12px;
+transition:.3s;
+}
+
+.section-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.funky-btn{
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+color:#0b0f1a;
+padding:.6rem 1rem;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.funky-btn:hover{
+transform:scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+background:#0b0f1a;
+text-align:center;
+padding:1rem;
+margin-top:2rem;
+}
+
+/* =========================
+   CINEMATIC ATMOSPHERE
+========================= */
+
+body::after{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background:linear-gradient(
+120deg,
+rgba(255,255,255,0.03),
+transparent,
+rgba(167,139,250,0.03)
+);
+animation:mistMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes mistMove{
+0%{transform:translateX(-2%)}
+100%{transform:translateX(2%)}
+}
+
+/* =========================
+   AMBIENT MIXER UI
+========================= */
+
+/* Floating Button */
+
+.ambient-toggle{
+position:fixed;
+bottom:24px;
+right:24px;
+width:52px;
+height:52px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+cursor:pointer;
+z-index:9999;
+
+background:rgba(30,41,59,0.75);
+backdrop-filter:blur(8px);
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:
+0 0 12px rgba(125,211,252,0.25),
+0 6px 20px rgba(0,0,0,0.5);
+
+transition:.25s;
+}
+
+.ambient-toggle:hover{
+transform:scale(1.08);
+}
+
+/* Mixer Panel */
+
+.ambient-panel{
+position:fixed;
+bottom:95px;
+right:24px;
+width:280px;
+padding:20px;
+border-radius:14px;
+
+background:rgba(15,23,42,0.85);
+backdrop-filter:blur(14px);
+
+border:1px solid rgba(255,255,255,0.1);
+
+box-shadow:
+0 12px 40px rgba(0,0,0,0.6),
+0 0 20px rgba(125,211,252,0.15);
+
+color:#e2e8f0;
+
+display:none;
+z-index:9999;
+}
+
+.ambient-visible{
+display:block;
+}
+
+.ambient-panel h3{
+margin:0 0 16px 0;
+font-size:18px;
+}
+
+/* Sound rows */
+
+.ambient-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:12px;
+}
+
+/* Sound buttons */
+
+.sound-btn{
+background:rgba(51,65,85,0.7);
+border:1px solid rgba(255,255,255,0.1);
+padding:6px 12px;
+border-radius:8px;
+color:#f8fafc;
+cursor:pointer;
+transition:.2s;
+}
+
+.sound-btn:hover{
+background:rgba(71,85,105,0.9);
+}
+
+.sound-btn.active{
+background:#38bdf8;
+color:#0f172a;
+box-shadow:0 0 10px rgba(56,189,248,.6);
+}
+
+/* Volume slider */
+
+#volumeControl{
+width:130px;
+height:5px;
+background:rgba(148,163,184,.4);
+border-radius:4px;
+}
+
+/* Close button */
+
+#ambientClose{
+margin-top:14px;
+width:100%;
+padding:7px;
+background:rgba(71,85,105,.6);
+border:none;
+border-radius:8px;
+color:#e2e8f0;
+cursor:pointer;
+}

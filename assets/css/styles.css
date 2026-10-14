@@ -1,0 +1,421 @@
+/* ========================================
+   HARMONIZA — ATMOSPHERIC CORE STYLES
+======================================== */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   ROOT VARIABLES
+======================================== */
+
+:root {
+  --bg-primary: #f4f7fb;
+  --bg-secondary: rgba(255,255,255,0.65);
+
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+
+  --accent: #7c9cff;
+  --accent-hover: #5f7ff0;
+
+  --border-color: rgba(255,255,255,0.25);
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
+
+  --blur-strength: blur(14px);
+
+  --transition: 0.3s ease;
+
+  --max-width: 1200px;
+  --content-width: 900px;
+}
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode {
+  --bg-primary: #07111f;
+  --bg-secondary: rgba(10,18,30,0.72);
+
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+
+  --accent: #8fb4ff;
+  --accent-hover: #b7ccff;
+
+  --border-color: rgba(255,255,255,0.08);
+
+  --shadow-soft: 0 12px 40px rgba(0,0,0,0.45);
+}
+
+/* ========================================
+   BODY BASE
+======================================== */
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+
+  background: linear-gradient(
+    180deg,
+    #dbeafe 0%,
+    #edf4ff 35%,
+    #f5f7fb 100%
+  );
+
+  color: var(--text-primary);
+  line-height: 1.7;
+
+  min-height: 100vh;
+
+  transition: background var(--transition), color var(--transition);
+}
+
+body.dark-mode {
+  background: linear-gradient(
+    180deg,
+    #020817 0%,
+    #07111f 35%,
+    #0b1727 100%
+  );
+}
+
+/* ========================================
+   MAIN LAYOUT SYSTEM
+======================================== */
+
+.container {
+  width: 92%;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 0 6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 3rem; /* STEP 1 FIX */
+}
+
+/* CENTER MARKDOWN CONTENT */
+main.container {
+  display: flex;
+  justify-content: center;
+}
+
+main.container > * {
+  width: 100%;
+  max-width: var(--content-width);
+}
+
+/* ========================================
+   STEP 2 — FIX TEXT ALIGNMENT
+======================================== */
+
+/* Headings centered for homepage feel */
+.container h1,
+.container h2,
+.container h3 {
+  text-align: center;
+}
+
+/* paragraphs centered */
+.container p {
+  text-align: center;
+}
+
+/* BUT LISTS LEFT ALIGNED (FIXES "COLUMN FEEL") */
+.container li {
+  text-align: left;
+}
+
+/* ========================================
+   STEP 3 — VISUAL CARD SYSTEM
+======================================== */
+
+.container section,
+.container > div {
+  padding: 1.5rem;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  margin-bottom: 2rem;
+}
+
+/* OPTIONAL: smooth spacing between blocks */
+.container hr {
+  margin: 3rem 0;
+  opacity: 0.3;
+}
+
+/* ========================================
+   SCENE MODE (CRITICAL FOR STEP 14+)
+======================================== */
+
+body.scene-mode .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+body.scene-mode main.container {
+  width: 100%;
+}
+
+/* scenes become immersive */
+body.scene-mode h1,
+body.scene-mode h2,
+body.scene-mode p,
+body.scene-mode li {
+  text-align: left;
+}
+
+/* ========================================
+   CINEMATIC OVERLAY LAYERS
+======================================== */
+
+.cinematic-fog,
+.cinematic-particles,
+.cinematic-lighting {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cinematic-fog { z-index: 1; }
+.cinematic-particles { z-index: 2; }
+.cinematic-lighting { z-index: 3; }
+
+/* content above visuals */
+.site-nav,
+.container,
+.site-footer,
+.ambient-toggle,
+.ambient-panel {
+  position: relative;
+  z-index: 10;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  -webkit-backdrop-filter: var(--blur-strength);
+  backdrop-filter: var(--blur-strength);
+
+  background: rgba(255,255,255,0.55);
+  border-bottom: 1px solid var(--border-color);
+}
+
+body.dark-mode .site-nav {
+  background: rgba(5,10,18,0.65);
+}
+
+.nav-container {
+  width: 92%;
+  max-width: var(--max-width);
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 0;
+}
+
+.logo img {
+  width: 58px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.funky-btn,
+.sound-btn,
+#ambientClose {
+  border: none;
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+.funky-btn:hover,
+.sound-btn:hover,
+#ambientClose:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.sound-btn.active {
+  background: #3bb273;
+}
+
+/* ========================================
+   GLASS CARD SYSTEM
+======================================== */
+
+.glass-card {
+  background: var(--bg-secondary);
+
+  -webkit-backdrop-filter: var(--blur-strength);
+  backdrop-filter: var(--blur-strength);
+
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ========================================
+   AMBIENT CONTROLS
+======================================== */
+
+.ambient-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.7);
+
+  -webkit-backdrop-filter: var(--blur-strength);
+  backdrop-filter: var(--blur-strength);
+
+  border: 1px solid var(--border-color);
+
+  cursor: pointer;
+  font-size: 1.5rem;
+
+  z-index: 1200;
+}
+
+.ambient-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 95px;
+
+  width: 300px;
+
+  background: var(--bg-secondary);
+
+  -webkit-backdrop-filter: var(--blur-strength);
+  backdrop-filter: var(--blur-strength);
+
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+
+  padding: 1.5rem;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px);
+
+  transition: var(--transition);
+}
+
+.ambient-panel.ambient-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.ambient-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  margin-top: 5rem;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: var(--blur-strength);
+
+    padding: 1rem;
+
+    display: none;
+  }
+
+  body.dark-mode .nav-list {
+    background: rgba(5,10,18,0.96);
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

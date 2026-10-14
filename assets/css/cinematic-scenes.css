@@ -1,0 +1,208 @@
+/* =========================================
+   HARMONIZA CINEMATIC SCENE SYSTEM
+========================================= */
+
+/* GLOBAL SCENE BASE */
+.scene-world {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #05070a;
+}
+
+/* DEPTH LAYERS */
+.scene-depth-back,
+.scene-depth-mid,
+.scene-depth-front {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.scene-depth-back {
+  transform: scale(1.02);
+  z-index: 1;
+}
+
+.scene-depth-mid {
+  z-index: 2;
+}
+
+.scene-depth-front {
+  z-index: 3;
+}
+
+/* VIGNETTE */
+.scene-vignette {
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.05),
+    rgba(0,0,0,0.72)
+  );
+
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* SCENE FOG */
+.scene-fog {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  opacity: 0.55;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(255,255,255,0.06),
+    transparent 60%
+  );
+
+  animation: fogDrift 20s ease-in-out infinite;
+}
+
+@keyframes fogDrift {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(30px) translateY(-12px); }
+  100% { transform: translateX(0px); }
+}
+
+/* PARTICLES */
+.scene-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+}
+
+/* UI PANEL */
+.scene-ui {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 20;
+
+  padding: 14px 18px;
+  border-radius: 18px;
+
+  background: rgba(0,0,0,0.32);
+
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* SCENE BUTTONS */
+.scene-btn {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-right: 8px;
+}
+
+.scene-btn:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .scene-ui {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+/* =========================================
+   CINEMATIC TRANSITION OVERLAY
+========================================= */
+
+.scene-transition {
+
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(20, 24, 32, 0.15),
+      rgba(0, 0, 0, 0.92)
+    );
+
+  opacity: 0;
+  pointer-events: none;
+
+  z-index: 9999;
+
+  transition:
+    opacity 1.2s ease,
+    backdrop-filter 1.2s ease;
+
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+/* ACTIVE STATE */
+
+.scene-transition.transition-active {
+
+  opacity: 1;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* =========================================
+   ATMOSPHERIC TRANSITION FX
+========================================= */
+
+.scene-transitioning .cinematic-fog {
+
+  opacity: 0.9 !important;
+
+  transform:
+    scale(1.12)
+    translateY(-10px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+.scene-transitioning .cinematic-particles {
+
+  opacity: 0.15;
+
+  transition:
+    opacity 1s ease;
+}
+
+.scene-transitioning .cinematic-lighting {
+
+  opacity: 0.25 !important;
+
+  transition:
+    opacity 1s ease;
+}
+
+/* =========================================
+   CINEMATIC PAGE MOTION
+========================================= */
+
+body {
+
+  transition:
+    background 1s ease,
+    filter 1s ease,
+    opacity 1s ease;
+}

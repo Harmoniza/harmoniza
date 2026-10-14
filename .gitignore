@@ -1,0 +1,5 @@
+_site/
+.env
+node_modules/
+.git-old-backup/
+.vscode/

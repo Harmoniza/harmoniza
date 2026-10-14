@@ -1,0 +1,481 @@
+---
+layout: default
+title: Rain Window
+description: Cinematic rain ambience experience.
+---
+
+<section class="scene-page rain-window-scene">
+
+  <!-- =========================
+       BACKGROUND
+  ========================== -->
+
+  <div class="scene-background rain-bg"></div>
+
+  <!-- =========================
+       DEPTH LAYERS
+  ========================== -->
+
+  <div class="rain-depth depth-back"></div>
+  <div class="rain-depth depth-mid"></div>
+  <div class="rain-depth depth-front"></div>
+
+  <!-- =========================
+       RAIN CANVAS
+  ========================== -->
+
+  <canvas id="rainCanvas"></canvas>
+
+  <!-- =========================
+       VIGNETTE
+  ========================== -->
+
+  <div class="rain-vignette"></div>
+
+  <!-- =========================
+       UI
+  ========================== -->
+
+  <div class="scene-ui">
+
+    <button
+      class="scene-btn"
+      id="rainToggleBtn"
+    >
+      🌧 Rain Audio
+    </button>
+
+    <a
+      class="scene-btn"
+      href="{{ "/aesthetic-scenes/" | relative_url }}"
+    >
+      ← Back
+    </a>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =========================
+   SCENE BASE
+========================= */
+
+.rain-window-scene {
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.rain-bg {
+
+  position: fixed;
+  inset: 0;
+
+  background:
+    url('{{ "/assets/images/Harmoniza-body-background-image.jpg" | relative_url }}')
+    center center / cover no-repeat;
+
+  filter:
+    brightness(0.4)
+    saturate(1.05)
+    contrast(1.08);
+
+  transform: scale(1.05);
+
+  z-index: 1;
+
+}
+
+/* =========================
+   DEPTH LAYERS
+========================= */
+
+.rain-depth {
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+}
+
+.depth-back {
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(60, 80, 110, 0.18),
+      rgba(0,0,0,0.45)
+    );
+
+  z-index: 2;
+
+}
+
+.depth-mid {
+
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+
+  opacity: 0.28;
+
+  z-index: 3;
+
+}
+
+.depth-front {
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.04),
+      rgba(0,0,0,0.4)
+    );
+
+  mix-blend-mode: screen;
+
+  z-index: 4;
+
+}
+
+/* =========================
+   RAIN CANVAS
+========================= */
+
+#rainCanvas {
+
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 6;
+  pointer-events: none;
+
+}
+
+/* =========================
+   VIGNETTE
+========================= */
+
+.rain-vignette {
+
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgba(0,0,0,0.72) 100%
+    );
+
+  pointer-events: none;
+
+  z-index: 7;
+
+}
+
+/* =========================
+   UI
+========================= */
+
+.scene-ui {
+
+  position: fixed;
+
+  bottom: 30px;
+  left: 30px;
+
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  z-index: 20;
+
+}
+
+.scene-btn {
+
+  padding: 12px 16px;
+
+  border: none;
+  border-radius: 14px;
+
+  background:
+    rgba(20,20,20,0.42);
+
+  color: white;
+
+  text-decoration: none;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+
+}
+
+.scene-btn:hover {
+
+  transform: translateY(-2px);
+
+  background:
+    rgba(255,255,255,0.12);
+
+}
+
+</style>
+
+<script>
+
+window.addEventListener("DOMContentLoaded", () => {
+
+  /* ---------------------------------
+     INIT SCENE
+  --------------------------------- */
+
+  if (window.SceneLoader) {
+    SceneLoader.init("rain");
+  }
+
+  /* ---------------------------------
+     AUDIO BUTTON
+  --------------------------------- */
+
+  const rainBtn =
+    document.getElementById(
+      "rainToggleBtn"
+    );
+
+  if (rainBtn) {
+
+    rainBtn.addEventListener(
+      "click",
+      () => {
+
+        SceneEngine.toggleAudio(
+          "rain",
+          rainBtn
+        );
+
+      }
+    );
+
+  }
+
+  /* ---------------------------------
+     CANVAS
+  --------------------------------- */
+
+  const canvas =
+    document.getElementById(
+      "rainCanvas"
+    );
+
+  const ctx =
+    canvas.getContext("2d");
+
+  function resizeCanvas() {
+
+    canvas.width =
+      window.innerWidth;
+
+    canvas.height =
+      window.innerHeight;
+
+  }
+
+  resizeCanvas();
+
+  window.addEventListener(
+    "resize",
+    resizeCanvas
+  );
+
+  /* ---------------------------------
+     PARTICLES
+  --------------------------------- */
+
+  const drops = [];
+
+  for (let i = 0; i < 450; i++) {
+
+    drops.push({
+
+      x:
+        Math.random() * canvas.width,
+
+      y:
+        Math.random() * canvas.height,
+
+      length:
+        Math.random() * 24 + 10,
+
+      speed:
+        Math.random() * 5 + 5,
+
+      opacity:
+        Math.random() * 0.4 + 0.15
+
+    });
+
+  }
+
+  /* ---------------------------------
+     RENDER LOOP
+  --------------------------------- */
+
+  function renderRain() {
+
+    ctx.clearRect(
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+
+    let windX = 0;
+
+    if (
+      window.SceneEngine?.windField
+    ) {
+
+      windX =
+        SceneEngine
+          .windField
+          .getVector().x * 6;
+
+    }
+
+    drops.forEach(drop => {
+
+      ctx.beginPath();
+
+      ctx.strokeStyle =
+        `rgba(
+          174,
+          194,
+          224,
+          ${drop.opacity}
+        )`;
+
+      ctx.lineWidth = 1;
+
+      ctx.moveTo(
+        drop.x,
+        drop.y
+      );
+
+      ctx.lineTo(
+        drop.x + windX,
+        drop.y + drop.length
+      );
+
+      ctx.stroke();
+
+      drop.y += drop.speed;
+
+      drop.x += windX * 0.03;
+
+      if (drop.y > canvas.height) {
+
+        drop.y = -30;
+
+        drop.x =
+          Math.random() * canvas.width;
+
+      }
+
+    });
+
+    requestAnimationFrame(
+      renderRain
+    );
+
+  }
+
+  renderRain();
+
+  /* ---------------------------------
+     DEPTH PARALLAX
+  --------------------------------- */
+
+  const back =
+    document.querySelector(".depth-back");
+
+  const mid =
+    document.querySelector(".depth-mid");
+
+  const front =
+    document.querySelector(".depth-front");
+
+  function updateDepth() {
+
+    if (!window.SceneEngine?.windField) {
+
+      requestAnimationFrame(updateDepth);
+      return;
+
+    }
+
+    const wind =
+      SceneEngine
+        .windField
+        .getVector();
+
+    if (back) {
+
+      back.style.transform =
+        `translate(
+          ${wind.x * 8}px,
+          ${wind.y * 4}px
+        )`;
+
+    }
+
+    if (mid) {
+
+      mid.style.transform =
+        `translate(
+          ${wind.x * 14}px,
+          ${wind.y * 7}px
+        )`;
+
+    }
+
+    if (front) {
+
+      front.style.transform =
+        `translate(
+          ${wind.x * 20}px,
+          ${wind.y * 10}px
+        )`;
+
+    }
+
+    requestAnimationFrame(
+      updateDepth
+    );
+
+  }
+
+  updateDepth();
+
+});
+
+</script>
